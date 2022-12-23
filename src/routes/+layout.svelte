@@ -8,14 +8,14 @@
 	import 'aos/dist/aos.css';
 
 	onMount(() => {
-		applyTheme('#835500');
+		applyTheme('#FED049');
 		AOS.init({
 			once: true,
 		});
 	})
 </script>
 
-<div class="bg-background text-on-background transition-colors duration-500">
+<div class="bg-background text-on-background">
 	<div class="container mx-auto min-h-screen flex">
 		<Navigation />
 		<div class="w-full flex-shrink">

@@ -1,6 +1,10 @@
 <script>
     import Groovy from "@components/illustration/Groovy.svelte";
     import HeroBlob from "@components/pattern/HeroBlob.svelte";
+
+    import { applyTheme } from '$lib/ColorGenerator';
+
+    const colors = ['#FED049', '#227C70', '#CB1C8D', '#009EFF'];
 </script>
 
 <section id="hero" class="relative flex items-center justify-center h-screen">
@@ -18,8 +22,26 @@
     <div data-aos="zoom-in-left" data-aos-delay="200">
         <Groovy />
     </div>
+    <div class="color-picker absolute bottom-8 right-0 flex flex-col gap-4">
+        {#each colors as color, i}
+            <button 
+                style="background-color: {color};" 
+                on:click={() => applyTheme(color)}
+                data-aos="fade-down"
+                data-aos-delay="{i * 200 + 1200}"
+                data-aos-anchor="#hero"
+            >
+            </button>
+        {/each}
+    </div>
 </section>
 
 <section id="portfolio">
     
 </section>
+
+<style lang="postcss">
+    .color-picker button {
+        @apply w-8 h-8 rounded-full;
+    }
+</style>
