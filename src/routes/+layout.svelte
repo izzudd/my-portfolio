@@ -1,16 +1,24 @@
 <script>
-	import '../app.css';
-	import {applyTheme} from '$lib/ColorGenerator';
+	import AOS from 'aos';
+	import { applyTheme } from '$lib/ColorGenerator';
 	import Navigation from '@components/layout/Navigation.svelte';
 	import { onMount } from 'svelte';
 
-	onMount(() => applyTheme('#835500'))
+	import '../app.css';
+	import 'aos/dist/aos.css';
+
+	onMount(() => {
+		applyTheme('#835500');
+		AOS.init({
+			once: true,
+		});
+	})
 </script>
 
 <div class="bg-background text-on-background transition-colors duration-500">
 	<div class="container mx-auto min-h-screen flex">
 		<Navigation />
-		<div class="w-full">
+		<div class="w-full flex-shrink">
 			<slot />
 		</div>
 	</div>
