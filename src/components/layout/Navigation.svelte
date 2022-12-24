@@ -8,26 +8,46 @@
     ];
 </script>
 
-<div class="navigation w-64 h-screen px-4 py-8 flex flex-col justify-between sticky top-0 overflow-y-hidden">
-    <nav class="flex flex-col gap-2">
+<div class="z-50 navigation sticky top-0 left-0 lg:w-64 h-screen py-4 lg:py-8 flex flex-col items-center lg:items-start lg:justify-between">
+    <nav class="flex flex-col items-baseline gap-4 lg:gap-2">
         {#each navs as {link, text}, i (link)}
+        <div class="[writing-mode:vertical-rl] lg:[writing-mode:initial] rotate-180 lg:rotate-0">
             <a 
                 data-aos="fade-right"
                 data-aos-delay="{i * 50 + 1500}"
                 href="{link}"
                 class:active={$page.url.pathname === link}
+                class="block whitespace-nowrap"
             >
                 {text}
             </a>
+        </div>
         {/each}
     </nav>
-    <div data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".navigation">
+
+    <!-- desktop alter -->
+    <div data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".navigation" class="hidden lg:block w-full">
         <a href="/alter" class="alter block relative py-2">
             <div class="absolute w-5/6 left-1/2 -translate-x-1/2 h-px bg-outline top-1/2"></div>
             <div class="text relative whitespace-nowrap w-fit px-4 bg-background left-0">Alter Ego</div>
             <div class="back-filter absolute bottom-0 w-0 h-full backdrop-invert"></div>
         </a>
     </div>
+
+    <!-- mobile alter -->
+    <div data-aos="fade-up" 
+        data-aos-delay="2000" 
+        data-aos-anchor=".navigation" 
+        class="lg:hidden h-full w-px my-6 bg-outline flex-grow">
+    </div>
+    <a href="/alter" 
+        data-aos="fade-up" 
+        data-aos-delay="2500" 
+        data-aos-anchor=".navigation" 
+        class="lg:hidden whitespace-nowrap [writing-mode:vertical-rl] lg:[writing-mode:unset] !rotate-180"
+    >
+        Alter Ego
+    </a>
 </div>
 
 <style lang="postcss">
@@ -38,13 +58,13 @@
             @apply font-bold text-lg;
 
             &::after {
-                @apply w-8;
+                @apply h-8 w-px lg:w-8 lg:h-px;
                 content: "";
             }
         }
 
         &::after {
-            @apply block w-0 h-px bg-outline transition-all duration-500;
+            @apply block w-px h-0 lg:h-px lg:w-0 bg-outline transition-all duration-500;
             content: "";
         }
     }
