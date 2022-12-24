@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Groovy from "@components/illustration/Groovy.svelte";
     import HeroBlob from "@components/pattern/HeroBlob.svelte";
 
@@ -12,7 +12,7 @@
         <HeroBlob />
     </div>
     <div>
-        <h1 class="font-bold text-8xl" data-aos="fade-in">Daffa <br> <span class="underline decoration-primary underline-offset-8">Izzudd</span>in</h1>
+        <h1 class="font-bold text-8xl" data-aos="fade-in" data-aos-duration="500">Daffa <br> <span class="underline decoration-primary underline-offset-8">Izzudd</span>in</h1>
         <p class="text-2xl mt-12 mb-24" data-aos="fade-in" data-aos-delay="500">I build amazing things on the web.</p>
         <ol class="text-right">
             <li class="text-lg" data-aos="fade-right" data-aos-delay="900">Front end web developer</li>

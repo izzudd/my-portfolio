@@ -1,9 +1,25 @@
+<script lang="ts">
+    import {page} from '$app/stores';
+    const navs = [
+        {link: '/', text: 'Izzudd'},
+        {link: '/about', text: 'About Me'},
+        {link: '/contact', text: 'Contact'},
+        {link: '/blog', text: 'Blog'},
+    ];
+</script>
+
 <div class="navigation w-64 h-screen px-4 py-8 flex flex-col justify-between sticky top-0 overflow-y-hidden">
     <nav class="flex flex-col gap-2">
-        <a data-aos="fade-right" data-aos-delay="1500" href="/" class="current">Izzudd</a>
-        <a data-aos="fade-right" data-aos-delay="1550" href="/about">About Me</a>
-        <a data-aos="fade-right" data-aos-delay="1600" href="/contact">Contant</a>
-        <a data-aos="fade-right" data-aos-delay="1650" href="/blog">Blog</a>
+        {#each navs as {link, text}, i (link)}
+            <a 
+                data-aos="fade-right"
+                data-aos-delay="{i * 50 + 1500}"
+                href="{link}"
+                class:active={$page.url.pathname === link}
+            >
+                {text}
+            </a>
+        {/each}
     </nav>
     <div data-aos="fade-up" data-aos-delay="2000" data-aos-anchor=".navigation">
         <a href="/alter" class="alter block relative py-2">
@@ -18,13 +34,18 @@
     nav a {
         @apply hover:font-bold;
 
-        &.current {
+        &.active {
             @apply font-bold text-lg;
 
             &::after {
-                @apply block w-8 h-px bg-outline;
+                @apply w-8;
                 content: "";
             }
+        }
+
+        &::after {
+            @apply block w-0 h-px bg-outline transition-all duration-500;
+            content: "";
         }
     }
 
