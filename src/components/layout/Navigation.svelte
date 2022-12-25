@@ -8,7 +8,7 @@
     ];
 </script>
 
-<div class="z-50 navigation sticky top-0 left-0 lg:w-64 h-screen py-4 lg:py-8 flex flex-col items-center lg:items-start lg:justify-between">
+<div class="text-sm lg:text-base z-50 navigation sticky top-0 left-0 lg:w-64 h-screen py-4 lg:py-8 flex flex-col items-center lg:items-start lg:justify-between">
     <nav class="flex flex-col items-baseline gap-4 lg:gap-2">
         {#each navs as {link, text}, i (link)}
         <div class="[writing-mode:vertical-rl] lg:[writing-mode:initial] rotate-180 lg:rotate-0">

@@ -12,7 +12,7 @@
 		AOS.init({
 			once: true,
 		});
-	})
+	});
 </script>
 
 <div class="bg-background text-on-background overflow-x-clip">
