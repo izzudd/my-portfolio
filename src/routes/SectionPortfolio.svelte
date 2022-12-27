@@ -1,3 +1,1 @@
-<section id="portfolio" class="min-h-screen">
-    
-</section>
+<section id="portfolio" class="min-h-screen" />
