@@ -1,6 +1,7 @@
 <script lang="ts">
   export let title: string;
   export let desc: String;
+  export let target: string;
   export let alternate = false;
   export let id = 0;
 </script>
@@ -12,7 +13,7 @@
   <div class="flex-1">
     <h3
       data-aos={alternate ? 'fade-left' : 'fade-right'}
-      class="text-xl lg:text-4xl font-bold lg:mb-2"
+      class="text-2xl lg:text-4xl font-bold lg:mb-2"
       data-aos-anchor=".pc-{id}"
     >
       {title}
@@ -24,20 +25,29 @@
     >
       {desc}
     </p>
-    <a href="/" class="mt-8 inline-block">
-      <span class="underline decoration-tertiary text-secondary">Read More</span>
-    </a>
+    <div
+      data-aos={alternate ? 'fade-left' : 'fade-right'}
+      data-aos-delay="1000"
+      data-aos-anchor=".pc-{id}"
+    >
+      <a
+        href={target}
+        class="hidden lg:inline-block mt-12 font-bold no-underline bg-tertiary-container text-on-tertiary-container rounded-full px-6 py-2"
+        >Learn More</a
+      >
+    </div>
   </div>
-  <div
-    class="flex-1 lg:px-0"
+  <a
+    href={target}
+    class="block flex-1 lg:px-0"
     data-aos={alternate ? 'fade-left' : 'fade-right'}
     data-aos-delay="200"
     data-aos-anchor=".pc-{id}"
   >
     <div
-      class="glance border-8 border-secondary-container transition-transform duration-500 w-full aspect-video bg-primary rounded-xl lg:rotate-3 hover:!rotate-0"
+      class="glance transition-all duration-500 w-full aspect-video bg-tertiary rounded-xl lg:rotate-3 hover:!rotate-0"
     />
-  </div>
+  </a>
 </div>
 
 <style lang="postcss">

@@ -64,7 +64,7 @@
     @apply hover:font-bold;
 
     &.active {
-      @apply font-bold text-lg;
+      @apply font-bold text-lg text-primary;
 
       &::after {
         @apply h-8 w-px lg:w-8 lg:h-px;
@@ -73,7 +73,7 @@
     }
 
     &::after {
-      @apply block w-px h-0 lg:h-px lg:w-0 bg-outline transition-all duration-500;
+      @apply block w-px h-0 lg:h-px lg:w-0 bg-primary-container transition-all duration-500;
       content: '';
     }
   }
