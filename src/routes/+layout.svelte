@@ -5,6 +5,7 @@
   import { onMount } from 'svelte';
 
   import '../app.css';
+  import '../app.postcss';
   import 'aos/dist/aos.css';
 
   onMount(() => {

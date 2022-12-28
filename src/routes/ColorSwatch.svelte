@@ -6,7 +6,7 @@
 
   function setTheme(color: string) {
     currentColor = color;
-    applyTheme(color)
+    applyTheme(color);
   }
 </script>
 
