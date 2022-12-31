@@ -1,0 +1,3 @@
+[[functions]]
+  name = "my-function"
+  command = "node --experimental-resolve-algorithm=node index.js"
