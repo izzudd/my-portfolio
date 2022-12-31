@@ -2,6 +2,7 @@
   export let title: string;
   export let desc: String;
   export let target: string;
+  export let image: string;
   export let alternate = false;
   export let id = 0;
 </script>
@@ -10,7 +11,7 @@
   class="flex flex-col lg:flex-row items-stretch lg:items-center gap-4 lg:gap-8 text-left pc-{id}"
   class:alternate
 >
-  <div class="flex-1">
+  <div class="flex-grow">
     <h3
       data-aos={alternate ? 'fade-left' : 'fade-right'}
       class="text-2xl lg:text-4xl font-bold lg:mb-2"
@@ -32,19 +33,21 @@
     >
       <a
         href={target}
-        class="hidden lg:inline-block mt-12 font-bold no-underline bg-tertiary-container text-on-tertiary-container rounded-full px-6 py-2"
+        class="hidden lg:inline-block mt-12 font-bold no-underline bg-tertiary-container hover:bg-tertiary text-on-tertiary-container hover:text-on-tertiary rounded-full px-6 py-2"
         >Learn More</a
       >
     </div>
   </div>
   <a
     href={target}
-    class="block flex-1 lg:px-0"
+    class="block xl:max-w-[50%] lg:max-w-lg lg:px-0"
     data-aos={alternate ? 'fade-left' : 'fade-right'}
     data-aos-delay="200"
     data-aos-anchor=".pc-{id}"
   >
-    <div
+    <img
+      src={image}
+      alt={title}
       class="glance transition-all duration-500 w-full aspect-video bg-tertiary rounded-xl lg:rotate-3 hover:!rotate-0"
     />
   </a>

@@ -4,7 +4,7 @@
     { link: '/', text: 'Izzudd' },
     { link: '/about', text: 'About Me' },
     { link: '/contact', text: 'Contact' },
-    { link: '/blog', text: 'Blog' },
+    { link: 'https://www.invasikode.com', text: 'Blog' },
   ];
 </script>
 

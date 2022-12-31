@@ -25,13 +25,12 @@
     >
       Have a Project in Mind?
     </h2>
-    <a
-      data-aos="fade-in"
-      data-aos-delay={delay + 500}
-      data-aos-anchor="#contact"
-      href="/contact"
-      class="lg:text-xl font-bold no-underline bg-secondary-container text-on-secondary-container rounded-full px-6 py-2"
-      >Contact Me</a
-    >
+    <div data-aos="fade-in" data-aos-delay={delay + 500} data-aos-anchor="#contact">
+      <a
+        href="/contact"
+        class="lg:text-xl font-bold no-underline bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary rounded-full px-6 py-2"
+        >Contact Me</a
+      >
+    </div>
   </div>
 </section>

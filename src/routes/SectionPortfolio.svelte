@@ -2,10 +2,30 @@
   import PortfolioCard from './PortfolioCard.svelte';
 
   const portfolios = [
-    { title: 'Invasikode', desc: 'web design and development', target: '/' },
-    { title: 'Sifana', desc: 'web design and development', target: '/' },
-    { title: "D'Embung Park", desc: 'front end web development', target: '/' },
-    { title: 'ERGEBE', desc: 'web design and development', target: '/' },
+    {
+      title: 'Invasikode',
+      desc: 'web design and development',
+      image: '/img/portfolio/inva-dark.png',
+      target: 'https://www.invasikode.com',
+    },
+    {
+      title: 'Sifana',
+      desc: 'web design and development',
+      image: '/img/portfolio/sifana.png',
+      target: 'https://www.sifana.id',
+    },
+    {
+      title: "D'Embung Park",
+      desc: 'front end web development',
+      image: '/img/portfolio/dembung.png',
+      target: 'https://www.dembung.my.id',
+    },
+    {
+      title: 'ERGEBE',
+      desc: 'web design and development',
+      image: '/img/portfolio/ergebe.png',
+      target: 'https://ergebe.netlify.app',
+    },
   ];
 </script>
 
@@ -19,8 +39,8 @@
   </div>
   <div data-aos="title-anim" class="aos-animate" />
   <div class="flex-grow flex flex-col gap-16 lg:gap-32 ">
-    {#each portfolios as { title, desc, target }, i}
-      <PortfolioCard {title} {desc} {target} alternate={i % 2 === 0} id={i} />
+    {#each portfolios as { title, desc, target, image }, i}
+      <PortfolioCard {title} {desc} {target} {image} alternate={i % 2 === 0} id={i} />
     {/each}
   </div>
 </section>
