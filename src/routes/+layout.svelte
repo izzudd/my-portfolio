@@ -1,5 +1,6 @@
 <script>
   import AOS from 'aos';
+  import 'iconify-icon';
   import { applyTheme } from '$lib/ColorGenerator';
   import Navigation from '@components/layout/Navigation.svelte';
   import { onMount } from 'svelte';
