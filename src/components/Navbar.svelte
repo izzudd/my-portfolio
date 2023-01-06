@@ -2,7 +2,7 @@
   import Grid from '@component/Grid.svelte';
 </script>
 
-<div class="bg-stone-400">
+<div class="bg-stone-300">
   <Grid>
     <div class="flex h-full bg-yellow-500">
       <a href="/" class="block text-2xl font-bold font-mono">Zuudd</a>
