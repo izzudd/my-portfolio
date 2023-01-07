@@ -1,4 +1,4 @@
-<div class="flex">
+<div class="flex max-w-[100vw]">
   <div class="edge"><slot name="left" /></div>
   <div class="x-side" />
   <div class="flex-grow"><slot /></div>

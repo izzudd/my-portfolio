@@ -2,6 +2,19 @@
   import Grid from '@component/Grid.svelte';
   import Groovy from '@component/Illustration/Groovy.svelte';
   import LinkButton from '@component/LinkButton.svelte';
+
+  const portfolios = [
+    {
+      title: 'Invasikode',
+      tag: ['Design', 'Development', 'Writing'],
+      link: '/',
+      image: '',
+      color: '#009EFF',
+    },
+    { title: 'Sifana', tag: ['Design', 'Development'], link: '/', image: '', color: '#62B6B7' },
+    { title: 'ERGEBE', tag: ['Design', 'Development'], link: '/', image: '', color: '#FED049' },
+    { title: "D'Embung Park", tag: ['Web Development'], link: '/', image: '', color: '#439A97' },
+  ];
 </script>
 
 <section class="bg-stone-200">
@@ -22,4 +35,23 @@
       </div>
     </div>
   </Grid>
+</section>
+
+<section>
+  {#each portfolios as { title, tag, link, image, color }, i}
+    <div style="background-color: {color};">
+      <Grid>
+        <div class="container h-screen mx-auto py-12 px-6 flex flex-col">
+          <div class="flex-grow bg-gray-100/20 mb-8" />
+          <div class="flex items-end justify-between">
+            <div>
+              <span class="font-mono opacity-60 text-xl">{tag.join(' | ')}</span>
+              <h2 lang="en" class="font-mono text-9xl font-bold">{title}</h2>
+            </div>
+            <div class="font-bold font-mono text-6xl opacity-40">#{i + 1}</div>
+          </div>
+        </div>
+      </Grid>
+    </div>
+  {/each}
 </section>
