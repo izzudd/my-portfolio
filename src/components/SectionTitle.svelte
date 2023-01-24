@@ -5,10 +5,9 @@
   let customClass = '';
   export { customClass as class };
 
+  let titleElem: Element;
   let windowWidth: number;
   let windowHeight: number;
-  let titleWidth: number;
-  let titlePos: number;
   let scrollPos: number;
 
   const mapNumber = (x: number, a: number, b: number, c: number, d: number) => {
@@ -17,12 +16,14 @@
     return ((x - a) / (b - a)) * (d - c) + c;
   };
 
+  $: titleWidth = +titleElem?.clientWidth;
+  $: titlePos = scrollPos + +titleElem?.getBoundingClientRect().top;
   $: repCount = Math.ceil(windowWidth / titleWidth) + 1 || 10;
   $: overflowWidth = titleWidth * repCount - windowWidth;
   $: titleScroll = mapNumber(
     scrollPos,
+    titlePos - windowHeight,
     titlePos,
-    titlePos + windowHeight,
     0,
     overflowWidth - titleWidth / 2
   );
@@ -37,7 +38,7 @@
 <div
   class="title relative text-5xl font-mono font-bold pr-24 pl-4 py-4 border-b-4 border-black overflow-x-hidden {customClass}"
 >
-  <h2 class="w-min invisible px-8" bind:clientWidth={titleWidth} bind:offsetHeight={titlePos}>
+  <h2 class="w-min invisible px-8" bind:this={titleElem}>
     {title}
   </h2>
   <div

@@ -1,26 +1,16 @@
 <script>
+  import Card from '@component/Card.svelte';
   import Grid from '@component/Grid.svelte';
   import Groovy from '@component/Illustration/Groovy.svelte';
   import LinkButton from '@component/LinkButton.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
 
-  const portfolios = [
-    {
-      title: 'Invasikode',
-      tag: ['Design', 'Development', 'Writing'],
-      link: '/',
-      image: '',
-      color: '#009EFF',
-    },
-    { title: 'Sifana', tag: ['Design', 'Development'], link: '/', image: '', color: '#62B6B7' },
-    { title: 'ERGEBE', tag: ['Design', 'Development'], link: '/', image: '', color: '#FED049' },
-    { title: "D'Embung Park", tag: ['Web Development'], link: '/', image: '', color: '#439A97' },
-  ];
+  import { projects, writings } from '../portfolio.json';
 </script>
 
 <section id="hero" class="bg-stone-200">
   <Grid>
-    <div class="container py-8 px-6 mx-auto flex items-center justify-center">
+    <div class="h-screen container py-8 px-6 mx-auto flex items-center justify-center">
       <div class="flex-shrink-0">
         <p class="font-mono opacity-60 text-xl"># Web developer</p>
         <h1 class="text-8xl font-bold font-mono">
@@ -40,36 +30,33 @@
 
 <section id="projects">
   <SectionTitle title="Projects" />
-  <Grid>
-    <div class="h-screen container mx-auto" />
-  </Grid>
+  <div class="bg-sky-400">
+    <Grid>
+      <div class="h-screen container mx-auto flex items-center justify-center p-8">
+        <div class="grid gap-8 grid-cols-2 w-full">
+          {#each projects as { title, tag, link, description } (title)}
+            <a href={link}> <Card leading="# {tag.join(' | ')}" {title} {description} /></a>
+          {/each}
+        </div>
+      </div>
+    </Grid>
+  </div>
 </section>
 
-<section id="blogs" />
+<section id="writings">
+  <SectionTitle title="Writings" />
+  <div class="bg-lime-400">
+    <Grid>
+      <div class="h-screen container mx-auto flex flex-col items-center justify-center p-8">
+        <div class="grid gap-8 grid-cols-2 w-full mb-8">
+          {#each writings as { title, leading, link, description } (title)}
+            <a href={link}> <Card {leading} {title} {description} /></a>
+          {/each}
+        </div>
+        <LinkButton href="https://www.invasikode.com">More -></LinkButton>
+      </div>
+    </Grid>
+  </div>
+</section>
 
 <section id="about" />
-
-<section id="portfolio">
-  {#each portfolios as { title, tag, link, image, color }, i}
-    <div style="background-color: {color};">
-      <Grid>
-        <div class="container mx-auto p-6 flex flex-col justify-center">
-          <div class="w-full aspect-video bg-gray-100/20 mb-8" />
-          <div class="flex flex-shrink-0 items-end justify-between">
-            <div>
-              <span class="font-mono opacity-60 text-xl">{tag.join(' | ')}</span>
-              <h2 lang="en" class="font-mono text-9xl font-bold">{title}</h2>
-            </div>
-            <div class="font-bold text-6xl opacity-40">#{i + 1}</div>
-          </div>
-        </div>
-      </Grid>
-    </div>
-  {/each}
-</section>
-
-<section id="glance">
-  <Grid>
-    <div class="container bg-white" />
-  </Grid>
-</section>
