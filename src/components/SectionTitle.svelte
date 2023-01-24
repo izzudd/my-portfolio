@@ -37,7 +37,7 @@
 <div
   class="title relative text-5xl font-mono font-bold pr-24 pl-4 py-4 border-b-4 border-black overflow-x-hidden {customClass}"
 >
-  <h2 class="w-min invisible px-8" bind:this={titleElem}>
+  <h2 class="w-min invisible px-8 whitespace-nowrap" bind:this={titleElem}>
     {title}
   </h2>
   <div
@@ -45,7 +45,7 @@
     style="transform: translate({reverse ? '' : '-'}{overflowWidth / 10 + titleScroll}px);"
   >
     {#each Array(repCount) as _, idx (idx)}
-      <span class="px-8">{title}</span>
+      <span class="px-8 whitespace-nowrap">{title}</span>
     {/each}
   </div>
 </div>
