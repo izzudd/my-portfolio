@@ -2,6 +2,7 @@
   import Grid from '@component/Grid.svelte';
   import Groovy from '@component/Illustration/Groovy.svelte';
   import LinkButton from '@component/LinkButton.svelte';
+  import SectionTitle from '@component/SectionTitle.svelte';
 
   const portfolios = [
     {
@@ -37,11 +38,22 @@
   </Grid>
 </section>
 
+<section id="projects">
+  <SectionTitle title="Projects" />
+  <Grid>
+    <div class="h-screen container mx-auto" />
+  </Grid>
+</section>
+
+<section id="blogs" />
+
+<section id="about" />
+
 <section id="portfolio">
   {#each portfolios as { title, tag, link, image, color }, i}
     <div style="background-color: {color};">
       <Grid>
-        <div class="h-screen mx-auto py-12 px-6 flex flex-col justify-center">
+        <div class="container mx-auto p-6 flex flex-col justify-center">
           <div class="w-full aspect-video bg-gray-100/20 mb-8" />
           <div class="flex flex-shrink-0 items-end justify-between">
             <div>
