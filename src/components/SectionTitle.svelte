@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-
   export let title: string;
+  export let reverse: boolean = false;
   let customClass = '';
   export { customClass as class };
 
@@ -42,8 +41,8 @@
     {title}
   </h2>
   <div
-    class="absolute top-0 left-0 py-4"
-    style="transform: translate(-{overflowWidth / 10 + titleScroll}px);"
+    class="absolute top-0 py-4 {reverse ? 'right-0' : 'left-0'}"
+    style="transform: translate({reverse ? '' : '-'}{overflowWidth / 10 + titleScroll}px);"
   >
     {#each Array(repCount) as _, idx (idx)}
       <span class="px-8">{title}</span>

@@ -4,6 +4,7 @@
   import Groovy from '@component/Illustration/Groovy.svelte';
   import LinkButton from '@component/LinkButton.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
+  import Typer from '@component/Typer.svelte';
 
   import { projects, writings } from '../portfolio.json';
 </script>
@@ -12,7 +13,9 @@
   <Grid>
     <div class="h-screen container py-8 px-6 mx-auto flex items-center justify-center">
       <div class="flex-shrink-0">
-        <p class="font-mono opacity-60 text-xl"># Web developer</p>
+        <p class="font-mono opacity-60 text-xl">
+          // I <Typer texts={['develop website', 'write article', 'code for fun', 'love coffee']} />
+        </p>
         <h1 class="text-8xl font-bold font-mono">
           Daffa <br /> <span class="underline decoration-amber-700">Izzud</span>din
         </h1>
@@ -44,7 +47,7 @@
 </section>
 
 <section id="writings">
-  <SectionTitle title="Writings" />
+  <SectionTitle title="Writings" reverse={true} />
   <div class="bg-lime-400">
     <Grid>
       <div class="h-screen container mx-auto flex flex-col items-center justify-center p-8">
