@@ -33,12 +33,13 @@
       "previews": []
     },
     {
-      "title": "ERGEBE",
+      "title": "D'Embung Park",
       "tag": [
-        "Development"
+        "Development",
+        "Volunteer"
       ],
-      "link": "https://ergebe.netlify.app",
-      "description": "First time doing volunteer work with a team to help out coffee farmers. Built a page to show and monitor a coffee sorting machine. It's all for a good cause.",
+      "link": "https://www.dembung.my.id",
+      "description": "First time doing volunteer work with a team to help out tourism village. Built a page to promote and give information about (not so) remote tourist destination. It's all for a good cause.",
       "previews": []
     }
   ],
@@ -67,5 +68,27 @@
       "link": "https://www.invasikode.com/buat-powershell-lebih-berwarna-dengan-starship",
       "description": "Simplify your command line experience with this guide on setting up the Starship prompt for PowerShell. Make CMD-ing more fun with colorful terminal in Windows Powershell"
     }
-  ]
+  ],
+  "about": {
+    "description": [
+      "I'm currently a computer science student at one of the universities in Indonesia. Getting into informatics engineering, I am passionate about the world of data and anything about building amazing things on the web.",
+      "So far, I've created a number of personal and commercial websites, including inva, my internet home where I can express my interest in the computing world. Feel free to visit and give me feedback.",
+      "I am pretty confident with my basic web skills, such as HTML, CSS, and JS. I mainly build websites with Vue and Nuxt in the front and Go with Postgres in the back. I also have experience using site builders such as Wordpress.",
+      "I'd love to get new experience with new people and new technology."
+    ],
+    "skills": [
+      {
+        "skill": "Design",
+        "rating": 0.7
+      },
+      {
+        "skill": "Front End",
+        "rating": 0.92
+      },
+      {
+        "skill": "Back End",
+        "rating": 0.84
+      }
+    ]
+  }
 }
