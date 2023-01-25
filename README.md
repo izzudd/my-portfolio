@@ -1,38 +1,41 @@
-# create-svelte
+# My Portfolio (WIP)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Live site can be seen [here](https://izzudd.invasikode.com)
 
-## Creating a project
+Made with :heart: and :coffee: by izzudd
 
-If you're seeing this, you've probably already done this step. Congrats!
+## A Litle Background
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+I finally got around to making my own portfolio website, 'cause why not? I had been procrastinating for a bit but finally felt the urge to build it and finish it up.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This site built using SvelteKit 'cause I'm really into this framework. I gotta say, the developer experience is freakin' awesome. As someone who mainly uses Vue, Svelte feels like home, but even better.
 
-## Developing
+So here it is, my online home. I'll be sharing all about me, my activities, projects, writing, and more. Just like a typical portfolio site, but it's all mine.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Wanna Do Some Test Drive?
+
+Clone this repo and run this command:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn install
+yarn dev
 ```
 
-## Building
+Open development site at [localhost:5173](http://localhost:5173)
 
-To create a production version of your app:
+## To Do
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [ ] General layout
+  - [x] Section
+  - [x] Header
+  - [ ] Footer
+  - [ ] Transition and animation
+- [ ] Implement front page
+  - [x] Hero section with illustration
+  - [x] Project section
+  - [x] Writing section
+  - [x] Glance section
+  - [ ] Contact Section
+- [ ] Mobile friendly (responsive design)
+- [ ] Add personal blog section
+- [x] Deploy :rocket:
