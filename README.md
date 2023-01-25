@@ -1,8 +1,14 @@
 # My Portfolio (WIP)
 
-Live site can be seen [here](https://izzudd.invasikode.com)
-
 Made with :heart: and :coffee: by izzudd
+
+- Framework: [SvelteKit](https://kit.svelte.dev)
+- Styling: [Tailwindcss](https://tailwindcss.com)
+- Icons: [Iconify](https://iconify.design)
+- Illustration: [Open Doodles](https://www.opendoodles.com)
+- Deployment: [![Netlify Status](https://api.netlify.com/api/v1/badges/e6f4b8ea-38ed-4c79-816c-9d5ee6a4abb5/deploy-status)](https://app.netlify.com/sites/magnificent-choux-2c2328/deploys)
+
+You can see the live site [here](https://izzudd.invasikode.com)
 
 ## A Litle Background
 
@@ -14,7 +20,7 @@ So here it is, my online home. I'll be sharing all about me, my activities, proj
 
 ## Wanna Do Some Test Drive?
 
-Clone this repo and run this command:
+Clone this repo and run this command (make sure you have [yarn](https://yarnpkg.com) installed):
 
 ```bash
 yarn install
