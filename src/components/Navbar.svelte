@@ -7,9 +7,10 @@
     <div class="flex h-full bg-yellow-500">
       <a href="/" class="block text-2xl font-bold font-mono">Zuudd</a>
       <nav class="flex w-fit border-l-4 border-black ml-auto text-lg font-bold bg-emerald-500">
-        <a href="#about">About</a>
-        <a href="/">Contact</a>
-        <a href="#writings">Blog</a>
+        <a class="hover:bg-sky-500" href="#projects">Projects</a>
+        <a class="hover:bg-lime-500" href="#writings">Blog</a>
+        <a class="hover:bg-orange-500" href="#about">About</a>
+        <a class=" hover:bg-fuchsia-500" href="#contact">Contact</a>
       </nav>
     </div>
   </Grid>
@@ -17,6 +18,6 @@
 
 <style lang="postcss">
   a {
-    @apply px-6 flex items-center h-full hover:bg-yellow-400;
+    @apply px-6 flex items-center h-full;
   }
 </style>

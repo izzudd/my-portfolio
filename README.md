@@ -36,12 +36,12 @@ Open development site at [localhost:5173](http://localhost:5173)
   - [x] Header
   - [ ] Footer
   - [ ] Transition and animation
-- [ ] Implement front page
+- [x] Implement front page
   - [x] Hero section with illustration
   - [x] Project section
   - [x] Writing section
   - [x] Glance section
-  - [ ] Contact Section
+  - [x] Contact Section
 - [ ] Mobile friendly (responsive design)
 - [ ] Add personal blog section
 - [x] Deploy :rocket:

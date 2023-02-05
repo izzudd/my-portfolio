@@ -9,13 +9,14 @@
 
 <section id="about">
   <SectionTitle title="Spill the coffee" />
-  <div>
+  <div class="bg-orange-200">
     <Grid>
-      <div class="min-h-screen flex items-center gap-4 p-8">
+      <div class="container mx-auto min-h-screen flex items-center gap-4 p-8">
+        <!-- Left pane: description -->
         <div class="flex-1">
           <h3 class="text-3xl font-mono font-bold mb-6">Learn More About Me</h3>
           {#each about.description as paragraph}
-            <p class="mb-2 opacity-80">{paragraph}</p>
+            <p class="mb-2 opacity-80 xl:text-lg">{paragraph}</p>
           {/each}
           <h3 class="text-2xl font-mono font-bold mb-4 mt-8">My Tech</h3>
           <div class="flex flex-wrap gap-6">
@@ -58,6 +59,7 @@
             </div>
           </div>
         </div>
+        <!-- Right pane: rating and decoration -->
         <div class="flex-1">
           <Coffee />
           {#each about.skills as { skill, rating }}
@@ -84,10 +86,10 @@
 <style lang="postcss">
   .tech {
     & h4 {
-      @apply font-mono text-sm mb-2;
+      @apply font-mono text-sm xl:text-base mb-2;
     }
     & div {
-      @apply flex gap-2 text-3xl;
+      @apply flex gap-2 text-3xl xl:text-5xl;
     }
   }
 </style>
