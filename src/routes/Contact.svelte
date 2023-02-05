@@ -16,14 +16,29 @@
         <div class="flex-1">
           <h3 class="text-4xl font-bold font-mono">Have Something in Mind?</h3>
           <p class="mb-6 text-lg">Feel free to contact me</p>
-          <form data-netlify="true" name="message" method="POST">
+          <form data-netlify="true" name="Message" method="POST">
+            <input type="hidden" name="form-name" value="Message" />
+            <div class="mb-2 floating-fixed bg-black border-4 border-black flex">
+              <label for="name"><Icon icon="material-symbols:person" /></label>
+              <input
+                type="name"
+                name="name"
+                placeholder="How should I call you? Leave your name here"
+                required
+              />
+            </div>
             <div class="mb-2 floating-fixed bg-black border-4 border-black flex">
               <label for="email"><Icon icon="material-symbols:mail-sharp" /></label>
-              <input type="email" name="email" placeholder="leave your email here" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Leave your email here, I'll reach you back ASAP"
+                required
+              />
             </div>
             <div class="mb-4 floating-fixed bg-black border-4 border-black flex">
-              <label for="email"><Icon icon="material-symbols:edit" /></label>
-              <textarea name="message" rows="6" placeholder="write your message" required />
+              <label for="message"><Icon icon="material-symbols:edit" /></label>
+              <textarea name="message" rows="6" placeholder="Write your message" required />
             </div>
             <button
               type="submit"
