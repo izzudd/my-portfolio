@@ -35,17 +35,17 @@
 />
 
 <div
-  class="title relative text-5xl font-mono font-bold pr-24 pl-4 py-4 border-b-4 border-black overflow-x-hidden {customClass}"
+  class="title relative text-3xl md:text-5xl font-mono font-bold pr-4 pl-4 py-2 md:py-4 border-b-4 border-black overflow-x-hidden {customClass}"
 >
-  <h2 class="w-min invisible px-8 whitespace-nowrap" bind:this={titleElem}>
+  <h2 class="w-min invisible px-6 md:px-8 whitespace-nowrap" bind:this={titleElem}>
     {title}
   </h2>
   <div
-    class="absolute top-0 py-4 {reverse ? 'right-0' : 'left-0'}"
+    class="absolute top-0 py-2 md:py-4 {reverse ? 'right-0' : 'left-0'}"
     style="transform: translate({reverse ? '' : '-'}{overflowWidth / 10 + titleScroll}px);"
   >
     {#each Array(repCount) as _, idx (idx)}
-      <span class="px-8 whitespace-nowrap">{title}</span>
+      <span class="px-6 md:px-8 whitespace-nowrap">{title}</span>
     {/each}
   </div>
 </div>

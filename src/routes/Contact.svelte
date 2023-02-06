@@ -9,8 +9,10 @@
   <SectionTitle title="Contact" reverse />
   <div class="bg-fuchsia-300">
     <Grid>
-      <div class="container p-8 mx-auto min-h-screen flex items-center gap-6">
-        <div class="flex-1">
+      <div
+        class="container py-8 px-6 mx-auto min-h-screen flex flex-col-reverse lg:flex-row items-center gap-6"
+      >
+        <div class="flex-1 w-full">
           <Swing />
         </div>
         <div class="flex-1">

@@ -10,8 +10,10 @@
   <SectionTitle title="Writings" reverse={true} />
   <div class="bg-lime-400">
     <Grid>
-      <div class="min-h-screen container mx-auto flex flex-col items-center justify-center p-8">
-        <div class="grid gap-8 grid-cols-2 w-full mb-8">
+      <div
+        class="min-h-screen container mx-auto flex flex-col items-center justify-center py-8 px-6"
+      >
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-2 w-full mb-8">
           {#each writings as { title, leading, link, description } (title)}
             <a href={link}> <Card {leading} {title} {description} /></a>
           {/each}

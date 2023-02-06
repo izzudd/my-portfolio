@@ -11,9 +11,11 @@
   <SectionTitle title="Spill the coffee" />
   <div class="bg-orange-200">
     <Grid>
-      <div class="container mx-auto min-h-screen flex items-center gap-4 p-8">
+      <div
+        class="container mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-center gap-4 py-8 px-6"
+      >
         <!-- Left pane: description -->
-        <div class="flex-1">
+        <div class="lg:flex-1">
           <h3 class="text-3xl font-mono font-bold mb-6">Learn More About Me</h3>
           {#each about.description as paragraph}
             <p class="mb-2 opacity-80 xl:text-lg">{paragraph}</p>
@@ -60,8 +62,9 @@
           </div>
         </div>
         <!-- Right pane: rating and decoration -->
-        <div class="flex-1">
-          <Coffee />
+        <div class="lg:flex-1 w-full mt-8 lg:mt-0">
+          <div class="hidden lg:block"><Coffee /></div>
+          <h3 class="text-2xl font-mono font-bold mb-4">Skills</h3>
           {#each about.skills as { skill, rating }}
             <div class="mt-4 flex items-center">
               <span class="w-36 font-mono font-bold">{skill}</span>

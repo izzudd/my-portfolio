@@ -1,7 +1,7 @@
 <div class="flex max-w-[100vw]">
   <div class="edge"><slot name="left" /></div>
   <div class="x-side" />
-  <div class="flex-grow"><slot /></div>
+  <div class="flex-grow min-h-[4rem]"><slot /></div>
   <div class="x-side" />
   <div class="edge"><slot name="right" /></div>
 </div>
@@ -9,7 +9,7 @@
 
 <style lang="postcss">
   .edge {
-    @apply flex-shrink-0 w-[4rem] min-h-[4rem];
+    @apply hidden md:block flex-shrink-0 w-[4rem] min-h-[4rem];
   }
 
   .y-side {
@@ -17,6 +17,6 @@
   }
 
   .x-side {
-    @apply min-h-full w-1 bg-black;
+    @apply hidden md:block min-h-full w-1 bg-black;
   }
 </style>
