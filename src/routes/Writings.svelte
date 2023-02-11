@@ -1,6 +1,6 @@
 <script>
   import Card from '@component/Card.svelte';
-  import Grid from '@component/Grid.svelte';
+  import GridContainer from '@component/GridContainer.svelte';
   import LinkButton from '@component/LinkButton.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import { writings } from '../portfolio.json';
@@ -9,7 +9,7 @@
 <section id="writings">
   <SectionTitle title="Writings" reverse={true} />
   <div class="bg-lime-400">
-    <Grid>
+    <GridContainer>
       <div
         class="min-h-screen container mx-auto flex flex-col items-center justify-center py-8 px-6"
       >
@@ -20,6 +20,6 @@
         </div>
         <LinkButton blank href="https://www.invasikode.com">More -></LinkButton>
       </div>
-    </Grid>
+    </GridContainer>
   </div>
 </section>

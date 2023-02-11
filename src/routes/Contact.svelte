@@ -1,5 +1,5 @@
 <script>
-  import Grid from '@component/Grid.svelte';
+  import GridContainer from '@component/GridContainer.svelte';
   import Swing from '@component/Illustration/Swing.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
@@ -8,7 +8,7 @@
 <section id="contact">
   <SectionTitle title="Contact" reverse />
   <div class="bg-fuchsia-300">
-    <Grid>
+    <GridContainer>
       <div
         class="container py-8 px-6 mx-auto min-h-screen flex flex-col-reverse lg:flex-row items-center gap-6"
       >
@@ -51,7 +51,7 @@
           </form>
         </div>
       </div>
-    </Grid>
+    </GridContainer>
   </div>
 </section>
 

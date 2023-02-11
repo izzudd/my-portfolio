@@ -1,9 +1,9 @@
 <script>
-  import Grid from '@component/Grid.svelte';
+  import GridContainer from '@component/GridContainer.svelte';
 </script>
 
 <div class="bg-stone-300">
-  <Grid>
+  <GridContainer>
     <div class="flex h-full bg-yellow-500">
       <a href="/" class="block text-2xl font-bold font-mono">Zuudd</a>
       <nav
@@ -15,7 +15,7 @@
         <a class=" hover:bg-fuchsia-500" href="#contact">Contact</a>
       </nav>
     </div>
-  </Grid>
+  </GridContainer>
 </div>
 
 <style lang="postcss">

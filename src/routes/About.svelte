@@ -1,5 +1,5 @@
 <script>
-  import Grid from '@component/Grid.svelte';
+  import GridContainer from '@component/GridContainer.svelte';
   import Coffee from '@component/Illustration/Coffee.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
@@ -10,7 +10,7 @@
 <section id="about">
   <SectionTitle title="Spill the coffee" />
   <div class="bg-orange-200">
-    <Grid>
+    <GridContainer>
       <div
         class="container mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-center gap-4 py-8 px-6"
       >
@@ -82,7 +82,7 @@
           {/each}
         </div>
       </div>
-    </Grid>
+    </GridContainer>
   </div>
 </section>
 

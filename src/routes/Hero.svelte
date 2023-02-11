@@ -1,5 +1,5 @@
 <script>
-  import Grid from '@component/Grid.svelte';
+  import GridContainer from '@component/GridContainer.svelte';
   import Groovy from '@component/Illustration/Groovy.svelte';
   import LinkButton from '@component/LinkButton.svelte';
   import Typer from '@component/Typer.svelte';
@@ -7,14 +7,12 @@
 </script>
 
 <section id="hero" class="bg-stone-200">
-  <Grid>
+  <GridContainer>
     <div
       class="max-w-full min-h-screen container py-8 px-6 mx-auto flex items-center justify-center"
     >
       <div class="flex-shrink-0">
-        <p class="font-mono opacity-60 text-xl">
-          // I <Typer texts={['develop website', 'write article', 'code for fun', 'love coffee']} />
-        </p>
+        <p class="font-mono opacity-60 text-xl">// Web Developer</p>
         <h1 class="text-6xl md:text-8xl font-bold font-mono">
           Daffa <br /> <span class="underline decoration-amber-700">Izzud</span>din
         </h1>
@@ -53,7 +51,7 @@
         <Groovy />
       </div>
     </div>
-  </Grid>
+  </GridContainer>
 </section>
 
 <style lang="postcss">
