@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Card from '@component/Card.svelte';
   import GridContainer from '@component/GridContainer.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
