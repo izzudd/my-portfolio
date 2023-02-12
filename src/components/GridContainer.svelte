@@ -1,19 +1,25 @@
 <script lang="ts">
-  import { animate, stagger, inView } from 'motion';
+  import { splashFinished } from '@store/pageLoading';
+  import { animate, stagger, inView, type AnimationControls } from 'motion';
   import { onMount } from 'svelte';
 
   let wrapper: HTMLElement;
   let xSides: HTMLDivElement[] = [];
 
+  let animation: AnimationControls;
+
   onMount(() => {
     inView(wrapper, () => {
-      animate(
+      animation = animate(
         xSides,
-        { height: [0, wrapper.clientHeight + 'px'] },
-        { delay: stagger(0.5, { start: 0.7 }), duration: 2 }
+        { height: [0, wrapper.clientHeight + 'px', ''] },
+        { delay: stagger(0.5), duration: 2.5 }
       );
+      animation.pause();
     });
   });
+
+  $: $splashFinished && animation?.play();
 </script>
 
 <div class="flex max-w-[100vw]" bind:this={wrapper}>

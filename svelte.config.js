@@ -10,7 +10,8 @@ const config = {
   kit: {
     adapter: adapter(),
     alias: {
-      '@component/*': 'src/components/*'
+      '@component/*': 'src/components/*',
+      '@store/*': 'src/stores/*'
     }
   },
 };

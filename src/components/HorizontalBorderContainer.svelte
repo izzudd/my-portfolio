@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { inView, animate, stagger } from 'motion';
+  import { inView, animate, stagger, type AnimationControls } from 'motion';
+  import { splashFinished } from '@store/pageLoading';
 
   export let topBorder = true;
   export let bottomBorder = true;
@@ -9,19 +10,20 @@
   let wrapperWidth = 0;
   let idx = 0;
 
-  let animFinished = false;
+  let animation: AnimationControls;
 
   onMount(async () => {
     inView(ySides[0], () => {
-      animate(
+      animation = animate(
         ySides,
-        { width: [0, wrapperWidth + 'px'] },
+        { width: [0, '100%'] },
         { easing: 'ease-out', duration: 1, delay: stagger(0.2, { start: 0.5 }) }
-      ).finished.then(() => (animFinished = true));
+      );
+      animation.pause();
     });
   });
 
-  $: animFinished && ySides.forEach((side) => (side.style.width = wrapperWidth + 'px'));
+  $: $splashFinished && animation?.play();
 </script>
 
 {#if topBorder}<div class="y-side" bind:this={ySides[idx++]} />{/if}

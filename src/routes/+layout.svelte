@@ -1,5 +1,6 @@
 <script lang="ts">
   import Navbar from '@component/Navbar.svelte';
+  import SplashScreen from '@component/SplashScreen.svelte';
 </script>
 
 <svelte:head>
@@ -12,5 +13,6 @@
   ></script>
 </svelte:head>
 
+<SplashScreen />
 <Navbar />
 <slot />
