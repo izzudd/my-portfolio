@@ -12,9 +12,9 @@ You can see the live site [here](https://izzudd.invasikode.com)
 
 ## A Litle Background
 
-I finally got around to making my own portfolio website, 'cause why not? I had been procrastinating for a bit but finally felt the urge to build it and finish it up.
+I finally got around to making my own portfolio website, because why not? I had been procrastinating for a bit but finally felt the urge to build it and finish it up.
 
-This site built using SvelteKit 'cause I'm really into this framework. I gotta say, the developer experience is freakin' awesome. As someone who mainly uses Vue, Svelte feels like home, but even better.
+This site built using SvelteKit, and I gotta say, the developer experience is awesome. As someone who mainly uses Vue, Svelte feels better than home.
 
 So here it is, my online home. I'll be sharing all about me, my activities, projects, writing, and more. Just like a typical portfolio site, but it's all mine.
 
@@ -42,6 +42,6 @@ Open development site at [localhost:5173](http://localhost:5173)
   - [x] Writing section
   - [x] Glance section
   - [x] Contact Section
-- [ ] Mobile friendly (responsive design)
+- [x] Mobile friendly (responsive design)
 - [ ] Add personal blog section
 - [x] Deploy :rocket:

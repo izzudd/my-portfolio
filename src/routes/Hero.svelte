@@ -7,9 +7,7 @@
 
 <section id="hero" class="bg-stone-200 overflow-x-hidden">
   <GridContainer>
-    <div
-      class="max-w-full min-h-screen container py-8 px-6 mx-auto flex items-center justify-center"
-    >
+    <div class="min-h-screen container py-8 px-6 mx-auto flex items-center justify-center">
       <div class="flex-shrink-0">
         <p class="font-mono opacity-60 text-xl">// Web Developer</p>
         <h1 class="text-6xl md:text-8xl font-bold font-mono">
