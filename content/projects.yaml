@@ -2,26 +2,29 @@
   tag: [Design, Full Stack, Writing]
   link: 'https://www.invasikode.com'
   description: >-
-    My own blogging website, incorporating both Vue and Nuxt for the full stack.
-    It features my writing on programming and tech related topics with over 1K
-    visitors per week.
+    My blogging website, built using Vue/Nuxt with JamStack Arhitecture.
+    It features my writing on programming and tech related topics with over 100 articles and
+    1K visitors weekly.
   previews: []
+
 - title: IdentifEye
   tag: [AI, Vision, API]
   link: 'https://github.com/izzudd/identifEye'
   description: >-
-    AI model deployed as REST API for 2 factor authentication using face 
+    AI model deployed as REST API for 2 factor authentication using face
     recognition scheme. Leveraging facenet to get facial feature and using similarity
     score for authentication.
   previews: []
-- title: Sifana
-  tag: [Design, Front End, Deployment]
-  link: 'https://www.sifana.id'
+
+- title: Saptorenggo Vilage's Site
+  tag: [OpenSID, Deployment, Development]
+  link: 'https://saptorenggo.my.id'
   description: >-
-    I worked on my first client project and built a landing page for a printing
-    company. I did the design and deployment too. And let's just say, it felt
-    pretty good to get paid for it.
+    I developed a website for a local village using OpenSID as part of Community
+    Service project (KKN) in Malang Regency. This aimed to improve efficiency
+    and accessibility within the village.
   previews: []
+  
 - title: D'Embung Park
   tag: [Front End, Volunteer]
   link: 'https://www.dembung.my.id'
