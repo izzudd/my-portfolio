@@ -1,0 +1,26 @@
+description:
+  - >-
+    Im currently a computer science student at one of the universities in
+    Indonesia. Getting into informatics engineering, I am passionate about the
+    world of data and anything about building amazing things on the web.
+  - >-
+    So far, Ive created a number of personal and commercial websites, including
+    inva, my internet home where I can express my interest in the computing
+    world. Feel free to visit and give me feedback.
+  - >-
+    I am pretty confident with my web development skills. I
+    mainly build websites with Vue and Nuxt in the front and Go with Postgres in
+    the back. I also have experience using site builders such as Wordpress.
+  - Id love to get new experience with new people and new technology.
+
+skills:
+  Design: 0.7
+  Front End: 0.92
+  Back End: 0.84
+
+techs:
+  Language: [logos:typescript-icon, logos:go]
+  Framework: [logos:nuxt-icon, logos:vue, logos:svelte-icon]
+  Styling: [logos:tailwindcss-icon, logos:postcss]
+  Database: [logos:postgresql]
+  Operational: [logos:github-icon, logos:netlify, logos:linux-tux, logos:figma]

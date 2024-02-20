@@ -1,0 +1,28 @@
+- title: What's Up Javascript? SoJS 2022
+  leading: Invasikode (id-ID)
+  link: 'https://www.invasikode.com/apa-kabar-javascript-rilis-state-of-js-2022'
+  description: >-
+    40k people took the 2022 State of JS survey and it's gonna be a blast to go
+    through. Here's a quick rundown of what's up with JavaScript this year,
+    based on the survey results.
+- title: 'React, Vue, Angular, what to Decide?'
+  leading: Invasikode (id-ID)
+  link: 'https://www.invasikode.com/react-angular-vue-pilih-framework-yang-mana'
+  description: >-
+    Explore the pros and cons of Vue, Angular, and React in this article,
+    helping you make an informed decision on which JavaScript framework to use
+    for your next project.
+- title: 'Guide: Using Node and Express with TS'
+  leading: Invasikode (id-ID)
+  link: 'https://www.invasikode.com/menggunakan-typescript-dengan-node-js-dan-express'
+  description: >-
+    Learn how to set up a Node.js and Express server with TypeScript in this
+    step-by-step guide, providing a solid foundation for your next web
+    development project.
+- title: Make CMD-ing Fun Again with Starship
+  leading: Invasikode (id-ID)
+  link: 'https://www.invasikode.com/buat-powershell-lebih-berwarna-dengan-starship'
+  description: >-
+    Simplify your command line experience with this guide on setting up the
+    Starship prompt for PowerShell. Make CMD-ing more fun with colorful terminal
+    in Windows Powershell

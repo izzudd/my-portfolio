@@ -4,7 +4,7 @@
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
 
-  import { about } from '../portfolio.json';
+  import about from '@content/about.yaml';
 </script>
 
 <section id="about">
@@ -22,50 +22,21 @@
           {/each}
           <h3 class="text-2xl font-mono font-bold mb-4 mt-8">My Tech</h3>
           <div class="flex flex-wrap gap-6">
-            <div class="tech">
-              <h4>Language</h4>
-              <div>
-                <Icon icon="logos:typescript-icon" />
-                <Icon icon="logos:go" />
+            {#each Object.entries(about.techs) as [tech, icons]}
+              <div class="tech">
+                <h4>{tech}</h4>
+                <div>
+                  {#each icons as icon} <Icon {icon} /> {/each}
+                </div>
               </div>
-            </div>
-            <div class="tech">
-              <h4>Framework</h4>
-              <div>
-                <Icon icon="logos:nuxt-icon" />
-                <Icon icon="logos:vue" />
-                <Icon icon="logos:svelte-icon" />
-              </div>
-            </div>
-            <div class="tech">
-              <h4>Styling</h4>
-              <div>
-                <Icon icon="logos:tailwindcss-icon" />
-                <Icon icon="logos:postcss" />
-              </div>
-            </div>
-            <div class="tech">
-              <h4>Database</h4>
-              <div>
-                <Icon icon="logos:postgresql" />
-              </div>
-            </div>
-            <div class="tech">
-              <h4>Operational</h4>
-              <div>
-                <Icon icon="logos:github-icon" />
-                <Icon icon="logos:netlify" />
-                <Icon icon="logos:linux-tux" />
-                <Icon icon="logos:figma" />
-              </div>
-            </div>
+            {/each}
           </div>
         </div>
         <!-- Right pane: rating and decoration -->
         <div class="lg:flex-1 w-full mt-8 lg:mt-0">
           <div class="hidden lg:block"><Coffee /></div>
           <h3 class="text-2xl font-mono font-bold mb-4">Skills</h3>
-          {#each about.skills as { skill, rating }}
+          {#each Object.entries(about.skills) as [skill, rating]}
             <div class="mt-4 flex items-center">
               <span class="w-36 font-mono font-bold">{skill}</span>
               <div class="rounded-full w-full h-3 bg-black p-1">

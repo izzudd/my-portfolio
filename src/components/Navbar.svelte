@@ -25,7 +25,7 @@
               : ''}"
           >
             <a class="hover:bg-sky-500" href="#projects">Projects</a>
-            <a class="hover:bg-lime-500" href="#writings">Blog</a>
+            <a class="hover:bg-lime-500" href="#writings">Writings</a>
             <a class="hover:bg-orange-500" href="#about">About</a>
             <a class=" hover:bg-fuchsia-500" href="#contact">Contact</a>
           </nav>

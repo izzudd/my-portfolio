@@ -3,7 +3,7 @@
   import GridContainer from '@component/GridContainer.svelte';
   import LinkButton from '@component/LinkButton.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
-  import { writings } from '../portfolio.json';
+  import writings from '@content/writings.yaml';
 </script>
 
 <section id="writings">
