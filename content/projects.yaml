@@ -1,3 +1,24 @@
+- title: SPARSE
+  tag: [AI, Vision, Remote Sensing]
+  link: /
+  description: >-
+    Solar Panel Remote Sensing (SPARSE) is a project that I developed to help
+    identify solar panels in satellite images. Using VueJS in the front-end and
+    combination of fancy computer vision AI to detect solar panels.
+  stack: [logos:pytorch-icon, logos:fastapi-icon, logos:vue, logos:leaflet, logos:docker-icon]
+  previews: []
+
+- title: InvaCMS
+  wip: true
+  tag: [Development, Open Source, CMS]
+  link: 'https://github.com/izzudd/invaCMS'
+  description: >-
+    This is a CMS that focuses on portablity and flexibility.
+    It can use any "Key Value" database and can be deployed on serverless architecture.
+    It's still in development but you can check the progress on the repository.
+  stack: [logos:nuxt-icon, logos:redis, logos:typescript-icon, logos:tailwindcss-icon]
+  previews: []
+
 - title: Invasikode
   tag: [Design, Full Stack, Writing]
   link: 'https://www.invasikode.com'
@@ -5,6 +26,7 @@
     My blogging website, built using Vue/Nuxt with JamStack Arhitecture.
     It features my writing on programming and tech related topics with over 100 articles and
     1K visitors weekly.
+  stack: [logos:nuxt-icon, logos:tailwindcss-icon, logos:typescript-icon, logos:netlify-icon, logos:markdown]
   previews: []
 
 - title: IdentifEye
@@ -14,22 +36,25 @@
     AI model deployed as REST API for 2 factor authentication using face
     recognition scheme. Leveraging facenet to get facial feature and using similarity
     score for authentication.
+  stack: [logos:go, logos:pytorch-icon, logos:react, logos:tailwindcss-icon]
   previews: []
 
 - title: Saptorenggo Vilage's Site
   tag: [OpenSID, Deployment, Development]
-  link: 'https://saptorenggo.my.id'
+  link: /
   description: >-
     I developed a website for a local village using OpenSID as part of Community
     Service project (KKN) in Malang Regency. This aimed to improve efficiency
     and accessibility within the village.
+  stack: [logos:php, logos:mariadb-icon]
   previews: []
   
 - title: D'Embung Park
   tag: [Front End, Volunteer]
-  link: 'https://www.dembung.my.id'
+  link: https://github.com/izzudd/filjar-dembung
   description: >-
     First time doing volunteer work with a team to help out tourism village.
     Built a page to promote and give information about remote tourist
     destination. It's all for a good cause.
+  stack: [logos:vue, logos:tailwindcss-icon]
   previews: []
