@@ -1,8 +1,8 @@
 <script>
   import GridContainer from '@component/GridContainer.svelte';
-  import Swing from '@component/Illustration/Swing.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
+  import { loadContent } from '@store/pageLoading';
 </script>
 
 <section id="contact">
@@ -13,7 +13,9 @@
         class="container py-8 px-6 mx-auto min-h-screen flex flex-col-reverse lg:flex-row items-center gap-6"
       >
         <div class="flex-1 w-full">
-          <Swing />
+          {#await loadContent(() => import('@component/Illustration/Swing.svelte')) then Swing}
+            <Swing.default />
+          {/await}
         </div>
         <div class="flex-1">
           <h3 class="text-4xl font-bold font-mono">Have Something in Mind?</h3>

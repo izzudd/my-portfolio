@@ -3,10 +3,12 @@
   import { loadContent, loading, splashFinished } from '@store/pageLoading';
   import { onMount } from 'svelte';
 
+  const duration = 1;
+
   onMount(() => {
     const openingAnim = timeline([
-      ['#splash .line.h', { width: [0, '100vw'] }, { duration: 2, delay: stagger(0.3) }],
-      ['#splash .line.v', { height: [0, '100vh'] }, { at: 0.6, duration: 2, delay: stagger(0.3) }],
+      ['#splash .line.h', { width: [0, '100vw'] }, { duration: duration, delay: stagger(duration/6) }],
+      ['#splash .line.v', { height: [0, '100vh'] }, { at: duration/3, duration: duration, delay: stagger(duration/6) }],
     ]);
 
     loadContent(() => openingAnim.finished);
@@ -17,10 +19,10 @@
       [
         '#splash .line.h',
         { width: [null, 0] },
-        { duration: 2, delay: stagger(0.3, { from: 'center' }) },
+        { duration: duration, delay: stagger(duration/6, { from: 'center' }) },
       ],
-      ['#splash .line.v', { height: [null, 0] }, { at: 0, duration: 2, delay: stagger(0.3) }],
-      ['#splash', { opacity: [1, 0] }, { duration: 1 }],
+      ['#splash .line.v', { height: [null, 0] }, { at: 0, duration: duration, delay: stagger(duration/6) }],
+      ['#splash', { opacity: [1, 0] }, { duration: duration/2 }],
     ]).finished;
     splashFinished.set(true);
   }

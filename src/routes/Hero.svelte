@@ -3,6 +3,7 @@
   import Groovy from '@component/Illustration/Groovy.svelte';
   import LinkButton from '@component/LinkButton.svelte';
   import Icon from '@iconify/svelte';
+  import { loadContent } from '@store/pageLoading';
 </script>
 
 <section id="hero" class="bg-stone-200 overflow-x-hidden">
@@ -45,7 +46,9 @@
         </div>
       </div>
       <div class="hidden lg:block w-1/2 flex-shrink">
-        <Groovy />
+        {#await loadContent(() => import('@component/Illustration/Groovy.svelte')) then Groovy}
+          <Groovy.default />
+        {/await}
       </div>
     </div>
   </GridContainer>

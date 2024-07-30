@@ -1,10 +1,10 @@
 <script>
   import GridContainer from '@component/GridContainer.svelte';
-  import Coffee from '@component/Illustration/Coffee.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
 
   import about from '@content/about.yaml';
+  import { loadContent } from '@store/pageLoading';
 </script>
 
 <section id="about">
@@ -34,7 +34,11 @@
         </div>
         <!-- Right pane: rating and decoration -->
         <div class="lg:flex-1 w-full mt-8 lg:mt-0">
-          <div class="hidden lg:block"><Coffee /></div>
+          <div class="hidden lg:block">
+            {#await loadContent(() => import('@component/Illustration/Coffee.svelte')) then Coffee}
+              <Coffee.default />
+            {/await}
+          </div>
           <h3 class="text-2xl font-mono font-bold mb-4">Skills</h3>
           {#each Object.entries(about.skills) as [skill, rating]}
             <div class="mt-4 flex items-center">
