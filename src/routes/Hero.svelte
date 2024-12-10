@@ -36,7 +36,7 @@
             </a>
             <a
               class="floating bg-amber-600 hover:!border-amber-600"
-              href="mailto:izzudd@invasikode.com"
+              href="mailto:halo@izzudd.my.id"
               target="_blank"
               rel="noreferrer"
             >
