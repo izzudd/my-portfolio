@@ -9,12 +9,12 @@
 
 - title: TataKata
   tag: [AI, NLP, Writing]
-  link: 'https://tatakata.netlify.app'
+  link: 'https://tata-kata.netlify.app'
   wip: true
   description: >-
     An automated text corrector for the Indonesian language, designed to comply with EYD
     and KBBI standards. Simply Gramarly but for Bahasa Indonesia.
-  stack: [logos:nuxt-icon]
+  stack: [logos:nuxt-icon, logos:postgresql]
   previews: []
 
 - title: InvaGhost
