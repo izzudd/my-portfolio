@@ -19,8 +19,9 @@ skills:
   Back End: 0.84
 
 techs:
-  Language: [logos:typescript-icon, logos:go]
+  Language: [logos:typescript-icon, logos:go, logos:python]
   Framework: [logos:nuxt-icon, logos:vue, logos:svelte-icon]
   Styling: [logos:tailwindcss-icon, logos:postcss]
   Database: [logos:postgresql]
+  AI: [logos:pytorch-icon, logos:hugging-face-icon, logos:openai-icon]
   Operational: [logos:github-icon, logos:netlify, logos:linux-tux, logos:figma]

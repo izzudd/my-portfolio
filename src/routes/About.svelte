@@ -20,7 +20,7 @@
           {#each about.description as paragraph}
             <p class="mb-2 opacity-80 xl:text-lg">{paragraph}</p>
           {/each}
-          <h3 class="text-2xl font-mono font-bold mb-4 mt-8">My Tech</h3>
+          <h3 class="text-2xl font-mono font-bold mb-4 mt-8">My Tech Stack</h3>
           <div class="flex flex-wrap gap-6">
             {#each Object.entries(about.techs) as [tech, icons]}
               <div class="tech">
@@ -39,8 +39,8 @@
               <Coffee.default />
             {/await}
           </div>
-          <h3 class="text-2xl font-mono font-bold mb-4">Skills</h3>
-          {#each Object.entries(about.skills) as [skill, rating]}
+          <!-- <h3 class="text-2xl font-mono font-bold mb-4">Skills</h3> -->
+          <!-- {#each Object.entries(about.skills) as [skill, rating]}
             <div class="mt-4 flex items-center">
               <span class="w-36 font-mono font-bold">{skill}</span>
               <div class="rounded-full w-full h-3 bg-black p-1">
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-          {/each}
+          {/each} -->
         </div>
       </div>
     </GridContainer>

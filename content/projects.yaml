@@ -1,22 +1,37 @@
+- title: GenBatik
+  tag: [AI, Image Generation, Full Stack]
+  link: 'https://batik.izzudd.my.id'
+  description: >-
+    Generate batik using your own prompt. Designed to help people create their
+    own batik pattern using AI. Just like stable diffusion but for batik.
+  stack: [logos:nuxt-icon, logos:pytorch-icon, logos:websocket, logos:hugging-face-icon]
+  previews: []
+
+- title: TataKata
+  tag: [AI, NLP, Writing]
+  link: 'https://tatakata.netlify.app'
+  wip: true
+  description: >-
+    An automated text corrector for the Indonesian language, designed to comply with EYD
+    and KBBI standards. Simply Gramarly but for Bahasa Indonesia.
+  stack: [logos:nuxt-icon]
+  previews: []
+
+- title: InvaGhost
+  tag: [CMS, Development, Theme]
+  link: 'https://github.com/izzudd/InvaGhost'
+  description: >-
+    A custom theme for Ghost CMS, designed to be simple and clean for invasi.dev site. Great
+    way to learn about Ghost theme development. Feel free to use it.
+  stack: [logos:ghost, logos:tailwindcss-icon, logos:postcss]
+
 - title: SPARSE
   tag: [AI, Vision, Remote Sensing]
   link: /
   description: >-
-    Solar Panel Remote Sensing (SPARSE) is a project that I developed to help
-    identify solar panels in satellite images. Using VueJS in the front-end and
-    combination of fancy computer vision AI to detect solar panels.
+    Solar Panel Remote Sensing (SPARSE), web apps to help
+    identify solar panels in satellite images. Integrating AI model, GIS, and Web technology.
   stack: [logos:pytorch-icon, logos:fastapi-icon, logos:vue, logos:leaflet, logos:docker-icon]
-  previews: []
-
-- title: InvaCMS
-  wip: true
-  tag: [Development, Open Source, CMS]
-  link: 'https://github.com/izzudd/invaCMS'
-  description: >-
-    This is a CMS that focuses on portablity and flexibility.
-    It can use any "Key Value" database and can be deployed on serverless architecture.
-    It's still in development but you can check the progress on the repository.
-  stack: [logos:nuxt-icon, logos:redis, logos:typescript-icon, logos:tailwindcss-icon]
   previews: []
 
 - title: Invasikode
