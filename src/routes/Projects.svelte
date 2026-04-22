@@ -13,7 +13,13 @@
         <div class="grid gap-8 grid-cols-1 md:grid-cols-2 w-full">
           {#each projects as { title, tag, link, description, wip, stack } (title)}
             <a href={link} target="_blank">
-              <Card leading="# {tag.join(' | ')}" {title} {description} mark="{wip && "WIP"}" icons="{stack}" />
+              <Card
+                leading="# {tag.join(' | ')}"
+                {title}
+                {description}
+                mark={wip && 'WIP'}
+                icons={stack}
+              />
             </a>
           {/each}
         </div>

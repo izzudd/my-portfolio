@@ -41,7 +41,14 @@
     My blogging website, built using Vue/Nuxt with JamStack Arhitecture.
     It features my writing on programming and tech related topics with over 100 articles and
     1K visitors weekly.
-  stack: [logos:nuxt-icon, logos:tailwindcss-icon, logos:typescript-icon, logos:netlify-icon, logos:markdown]
+  stack:
+    [
+      logos:nuxt-icon,
+      logos:tailwindcss-icon,
+      logos:typescript-icon,
+      logos:netlify-icon,
+      logos:markdown,
+    ]
   previews: []
 
 - title: IdentifEye
@@ -63,7 +70,7 @@
     and accessibility within the village.
   stack: [logos:php, logos:mariadb-icon]
   previews: []
-  
+
 - title: D'Embung Park
   tag: [Front End, Volunteer]
   link: https://github.com/izzudd/filjar-dembung

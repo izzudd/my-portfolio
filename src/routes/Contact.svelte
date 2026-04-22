@@ -42,7 +42,8 @@
             </div>
             <div class="mb-4 floating-fixed bg-black border-4 border-black flex">
               <label for="message"><Icon icon="material-symbols:edit" /></label>
-              <textarea name="message" rows="6" placeholder="Write your message" required />
+              <textarea name="message" rows="6" placeholder="Write your message" required
+              ></textarea>
             </div>
             <button
               type="submit"
@@ -57,7 +58,8 @@
   </div>
 </section>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   form {
     & label {
       @apply flex justify-center text-white text-4xl w-12 flex-shrink-0;

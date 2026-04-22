@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { stagger, timeline } from 'motion';
   import { loadContent, loading, splashFinished } from '@store/pageLoading';
   import { onMount } from 'svelte';
@@ -7,8 +9,16 @@
 
   onMount(() => {
     const openingAnim = timeline([
-      ['#splash .line.h', { width: [0, '100vw'] }, { duration: duration, delay: stagger(duration/6) }],
-      ['#splash .line.v', { height: [0, '100vh'] }, { at: duration/3, duration: duration, delay: stagger(duration/6) }],
+      [
+        '#splash .line.h',
+        { width: [0, '100vw'] },
+        { duration: duration, delay: stagger(duration / 6) },
+      ],
+      [
+        '#splash .line.v',
+        { height: [0, '100vh'] },
+        { at: duration / 3, duration: duration, delay: stagger(duration / 6) },
+      ],
     ]);
 
     loadContent(() => openingAnim.finished);
@@ -19,15 +29,21 @@
       [
         '#splash .line.h',
         { width: [null, 0] },
-        { duration: duration, delay: stagger(duration/6, { from: 'center' }) },
+        { duration: duration, delay: stagger(duration / 6, { from: 'center' }) },
       ],
-      ['#splash .line.v', { height: [null, 0] }, { at: 0, duration: duration, delay: stagger(duration/6) }],
-      ['#splash', { opacity: [1, 0] }, { duration: duration/2 }],
+      [
+        '#splash .line.v',
+        { height: [null, 0] },
+        { at: 0, duration: duration, delay: stagger(duration / 6) },
+      ],
+      ['#splash', { opacity: [1, 0] }, { duration: duration / 2 }],
     ]).finished;
     splashFinished.set(true);
   }
 
-  $: !$loading && openSplash();
+  run(() => {
+    !$loading && openSplash();
+  });
 </script>
 
 {#if !$splashFinished}
@@ -36,20 +52,21 @@
     id="splash"
   >
     <div class="font-mono text-center w-screen">
-      <div class="line h" />
+      <div class="line h"></div>
       <div class="inline-block py-2 px-4 relative">
-        <div class="line v top-0 left-0" />
+        <div class="line v top-0 left-0"></div>
         <span class="text-6xl font-bold">Zuudd</span>
-        <div class="line v right-0 bottom-0" />
+        <div class="line v right-0 bottom-0"></div>
       </div>
-      <div class="line h ml-auto" />
+      <div class="line h ml-auto"></div>
       <span class="font-light">Web developer</span>
-      <div class="line h mx-auto" />
+      <div class="line h mx-auto"></div>
     </div>
   </div>
 {/if}
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   .line {
     @apply bg-black;
 

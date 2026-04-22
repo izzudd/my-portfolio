@@ -2,7 +2,7 @@
   import GridContainer from '@component/GridContainer.svelte';
   import HorizontalBorderContainer from './HorizontalBorderContainer.svelte';
 
-  let showMobileNav = false;
+  let showMobileNav = $state(false);
 </script>
 
 <div class="bg-stone-300">
@@ -16,7 +16,7 @@
           <button
             class:bg-yellow-500={showMobileNav}
             class="md:hidden px-6 h-full"
-            on:click={() => (showMobileNav = !showMobileNav)}
+            onclick={() => (showMobileNav = !showMobileNav)}
             >{showMobileNav ? 'Close' : 'Menu'}</button
           >
           <nav
@@ -35,7 +35,8 @@
   </HorizontalBorderContainer>
 </div>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   nav a {
     @apply flex-1 w-full text-center px-0 py-4 md:py-0 md:px-6 md:flex items-center;
   }

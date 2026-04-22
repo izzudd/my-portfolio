@@ -2,6 +2,11 @@
   import Navbar from '@component/Navbar.svelte';
   import SplashScreen from '@component/SplashScreen.svelte';
   import { env } from '$env/dynamic/public';
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 
   const { PUBLIC_UMAMI_ID, PUBLIC_UMAMI_SOURCE } = env;
 </script>
@@ -15,4 +20,4 @@
 
 <SplashScreen />
 <Navbar />
-<slot />
+{@render children?.()}

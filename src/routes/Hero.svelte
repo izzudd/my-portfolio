@@ -54,7 +54,8 @@
   </GridContainer>
 </section>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   .social a {
     @apply flex items-center p-2 border-4 border-black;
   }

@@ -26,7 +26,9 @@
               <div class="tech">
                 <h4>{tech}</h4>
                 <div>
-                  {#each icons as icon} <Icon {icon} /> {/each}
+                  {#each icons as icon}
+                    <Icon {icon} />
+                  {/each}
                 </div>
               </div>
             {/each}
@@ -61,7 +63,8 @@
   </div>
 </section>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   .tech {
     & h4 {
       @apply font-mono text-sm xl:text-base mb-2;

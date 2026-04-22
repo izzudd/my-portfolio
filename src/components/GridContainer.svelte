@@ -1,36 +1,48 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { splashFinished } from '@store/pageLoading';
   import { animate, stagger, inView, type AnimationControls } from 'motion';
   import { onMount } from 'svelte';
+  interface Props {
+    left?: import('svelte').Snippet;
+    children?: import('svelte').Snippet;
+    right?: import('svelte').Snippet;
+  }
 
-  let wrapper: HTMLElement;
-  let xSides: HTMLDivElement[] = [];
+  let { left, children, right }: Props = $props();
 
-  let animation: AnimationControls;
+  let wrapper: HTMLElement | undefined = $state();
+  let xSides: HTMLDivElement[] = $state([]);
+
+  let animation: AnimationControls | undefined = $state();
 
   onMount(() => {
-    inView(wrapper, () => {
+    inView(wrapper!, () => {
       animation = animate(
         xSides,
-        { height: [0, wrapper.clientHeight + 'px', ''] },
+        { height: [0, wrapper!.clientHeight + 'px', ''] },
         { delay: stagger(0.5), duration: 2.5 }
       );
       animation.pause();
     });
   });
 
-  $: $splashFinished && animation?.play();
+  run(() => {
+    $splashFinished && animation?.play();
+  });
 </script>
 
 <div class="flex max-w-[100vw]" bind:this={wrapper}>
-  <div class="edge"><slot name="left" /></div>
-  <div class="x-side" bind:this={xSides[0]} />
-  <div class="flex-grow min-h-[4rem]"><slot /></div>
-  <div class="x-side" bind:this={xSides[1]} />
-  <div class="edge"><slot name="right" /></div>
+  <div class="edge">{@render left?.()}</div>
+  <div class="x-side" bind:this={xSides[0]}></div>
+  <div class="flex-grow min-h-[4rem]">{@render children?.()}</div>
+  <div class="x-side" bind:this={xSides[1]}></div>
+  <div class="edge">{@render right?.()}</div>
 </div>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   .edge {
     @apply hidden md:block flex-shrink-0 w-[4rem] min-h-[4rem];
   }

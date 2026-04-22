@@ -1,15 +1,18 @@
 <script lang="ts">
   import HorizontalBorderContainer from './HorizontalBorderContainer.svelte';
 
-  export let title: string;
-  export let reverse: boolean = false;
-  let customClass = '';
-  export { customClass as class };
+  interface Props {
+    title: string;
+    reverse?: boolean;
+    class?: string;
+  }
 
-  let titleElem: Element;
-  let windowWidth: number;
-  let windowHeight: number;
-  let scrollPos: number;
+  let { title, reverse = false, class: customClass = '' }: Props = $props();
+
+  let titleElem: Element | undefined = $state();
+  let windowWidth: number = $state(0);
+  let windowHeight: number = $state(0);
+  let scrollPos: number = $state(0);
 
   const mapNumber = (x: number, a: number, b: number, c: number, d: number) => {
     x = x < a ? a : x;
@@ -17,16 +20,12 @@
     return ((x - a) / (b - a)) * (d - c) + c;
   };
 
-  $: titleWidth = +titleElem?.clientWidth;
-  $: titlePos = scrollPos + +titleElem?.getBoundingClientRect().top;
-  $: repCount = Math.ceil(windowWidth / titleWidth) + 1 || 10;
-  $: overflowWidth = titleWidth * repCount - windowWidth;
-  $: titleScroll = mapNumber(
-    scrollPos,
-    titlePos - windowHeight,
-    titlePos,
-    0,
-    overflowWidth - titleWidth / 2
+  let titleWidth = $derived(+titleElem?.clientWidth!);
+  let titlePos = $derived(scrollPos + +titleElem?.getBoundingClientRect().top!);
+  let repCount = $derived(Math.ceil(windowWidth / titleWidth) + 1 || 10);
+  let overflowWidth = $derived(titleWidth * repCount - windowWidth);
+  let titleScroll = $derived(
+    mapNumber(scrollPos, titlePos - windowHeight, titlePos, 0, overflowWidth - titleWidth / 2) || 0
   );
 </script>
 
@@ -38,7 +37,7 @@
 
 <HorizontalBorderContainer>
   <div
-    class="title relative text-3xl md:text-5xl font-mono font-bold pr-4 pl-4 py-2 md:py-4  overflow-x-hidden {customClass}"
+    class="title relative text-3xl md:text-5xl font-mono font-bold pr-4 pl-4 py-2 md:py-4 overflow-x-hidden {customClass}"
   >
     <h2 class="w-min invisible px-6 md:px-8 whitespace-nowrap" bind:this={titleElem}>
       {title}
