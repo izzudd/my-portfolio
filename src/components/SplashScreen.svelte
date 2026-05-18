@@ -42,7 +42,7 @@
   }
 
   run(() => {
-    !$loading && openSplash();
+    !$loading && typeof document !== 'undefined' && openSplash();
   });
 </script>
 

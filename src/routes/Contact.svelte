@@ -67,7 +67,7 @@
 
     & textarea,
     & input {
-      @apply text-lg px-2 block flex-grow outline-none;
+      @apply text-lg px-2 block flex-grow outline-none bg-white text-black;
     }
   }
 </style>
