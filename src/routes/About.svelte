@@ -41,22 +41,6 @@
               <Coffee.default />
             {/await}
           </div>
-          <!-- <h3 class="text-2xl font-mono font-bold mb-4">Skills</h3> -->
-          <!-- {#each Object.entries(about.skills) as [skill, rating]}
-            <div class="mt-4 flex items-center">
-              <span class="w-36 font-mono font-bold">{skill}</span>
-              <div class="rounded-full w-full h-3 bg-black p-1">
-                <div
-                  class="relative rounded-full h-full bg-orange-400 flex items-center"
-                  style="width: {rating * 100}%;"
-                >
-                  <div
-                    class="ml-auto first-letter: w-5 h-5 rounded-full bg-orange-400 border-4 border-black"
-                  />
-                </div>
-              </div>
-            </div>
-          {/each} -->
         </div>
       </div>
     </GridContainer>
