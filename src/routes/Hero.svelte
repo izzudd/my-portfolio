@@ -1,6 +1,6 @@
 <script lang="ts">
   import GridContainer from '@component/GridContainer.svelte';
-  import Groovy from '@component/Illustration/Groovy.svelte';
+
   import LinkButton from '@component/LinkButton.svelte';
   import Icon from '@iconify/svelte';
   import { loadContent } from '@store/pageLoading';
@@ -54,7 +54,8 @@
   </GridContainer>
 </section>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   .social a {
     @apply flex items-center p-2 border-4 border-black;
   }

@@ -1,9 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  export let texts: string[];
+  interface Props {
+    texts: string[];
+  }
 
-  let display = '';
+  let { texts }: Props = $props();
+
+  let display = $state('');
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -36,7 +40,8 @@
 
 {display}<span class="cursor">_</span>
 
-<style lang="postcss">
+<style>
+  @reference "../app.css";
   .cursor {
     animation-name: blink;
     animation-duration: 1s;
