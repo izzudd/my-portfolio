@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
-
   import { stagger, timeline } from 'motion';
   import { loadContent, loading, splashFinished } from '@store/pageLoading';
   import { onMount } from 'svelte';
@@ -41,7 +39,7 @@
     splashFinished.set(true);
   }
 
-  run(() => {
+  $effect(() => {
     !$loading && typeof document !== 'undefined' && openSplash();
   });
 </script>

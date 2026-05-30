@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
-
   import { splashFinished } from '@store/pageLoading';
   import { animate, stagger, inView, type AnimationControls } from 'motion';
   import { onMount } from 'svelte';
@@ -28,7 +26,7 @@
     });
   });
 
-  run(() => {
+  $effect(() => {
     $splashFinished && animation?.play();
   });
 </script>
