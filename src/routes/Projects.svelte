@@ -17,7 +17,7 @@
                 leading="# {tag.join(' | ')}"
                 {title}
                 {description}
-                mark={wip && 'WIP'}
+                mark={wip ? 'WIP' : undefined}
                 icons={stack}
               />
             </a>
