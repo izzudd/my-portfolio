@@ -5,6 +5,8 @@
 
   import about from '@content/about.yaml';
   import { loadContent } from '@store/pageLoading';
+
+  const techEntries = Object.entries(about.techs);
 </script>
 
 <section id="about">
@@ -22,7 +24,7 @@
           {/each}
           <h3 class="text-2xl font-mono font-bold mb-4 mt-8">My Tech Stack</h3>
           <div class="flex flex-wrap gap-6">
-            {#each Object.entries(about.techs) as [tech, icons]}
+            {#each techEntries as [tech, icons]}
               <div class="tech">
                 <h4>{tech}</h4>
                 <div>
