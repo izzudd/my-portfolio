@@ -22,7 +22,7 @@
               class="floating bg-blue-600 hover:!border-blue-600"
               href="https://www.linkedin.com/in/daffa-izzuddin/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <Icon icon="carbon:logo-linkedin" />
             </a>
@@ -30,7 +30,7 @@
               class="floating bg-gray-800 hover:!border-gray-800"
               href="https://github.com/izzudd"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <Icon icon="carbon:logo-github" />
             </a>
@@ -38,7 +38,7 @@
               class="floating bg-amber-600 hover:!border-amber-600"
               href="mailto:halo@izzudd.my.id"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <Icon icon="material-symbols:alternate-email" />
             </a>
