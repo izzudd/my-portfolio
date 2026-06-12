@@ -11,9 +11,11 @@
 
   let { topBorder = true, bottomBorder = true, children }: Props = $props();
 
-  let ySides: HTMLDivElement[] = $state([]);
+  let topEl: HTMLDivElement | undefined = $state();
+  let bottomEl: HTMLDivElement | undefined = $state();
+
+  let ySides = $derived([topEl, bottomEl].filter(Boolean) as HTMLDivElement[]);
   let wrapperWidth = $state(0);
-  let idx = $state(0);
 
   let animation: AnimationControls | undefined = $state();
 
@@ -33,11 +35,11 @@
   });
 </script>
 
-{#if topBorder}<div class="y-side" bind:this={ySides[idx++]}></div>{/if}
+{#if topBorder}<div class="y-side" bind:this={topEl}></div>{/if}
 <div bind:clientWidth={wrapperWidth}>
   {@render children?.()}
 </div>
-{#if bottomBorder}<div class="y-side" bind:this={ySides[idx++]}></div>{/if}
+{#if bottomBorder}<div class="y-side" bind:this={bottomEl}></div>{/if}
 
 <style>
   @reference "../app.css";
