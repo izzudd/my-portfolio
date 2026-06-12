@@ -12,7 +12,6 @@
   let { topBorder = true, bottomBorder = true, children }: Props = $props();
 
   let ySides: HTMLDivElement[] = $state([]);
-  let wrapperWidth = $state(0);
   let idx = $state(0);
 
   let animation: AnimationControls | undefined = $state();
@@ -34,7 +33,7 @@
 </script>
 
 {#if topBorder}<div class="y-side" bind:this={ySides[idx++]}></div>{/if}
-<div bind:clientWidth={wrapperWidth}>
+<div>
   {@render children?.()}
 </div>
 {#if bottomBorder}<div class="y-side" bind:this={ySides[idx++]}></div>{/if}
