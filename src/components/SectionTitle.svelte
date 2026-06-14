@@ -1,5 +1,6 @@
 <script lang="ts">
   import HorizontalBorderContainer from './HorizontalBorderContainer.svelte';
+  import { mapNumber } from '../utils/math';
 
   interface Props {
     title: string;
@@ -13,12 +14,6 @@
   let windowWidth: number = $state(0);
   let windowHeight: number = $state(0);
   let scrollPos: number = $state(0);
-
-  const mapNumber = (x: number, a: number, b: number, c: number, d: number) => {
-    x = x < a ? a : x;
-    x = x > b ? b : x;
-    return ((x - a) / (b - a)) * (d - c) + c;
-  };
 
   let titleWidth = $derived(+titleElem?.clientWidth!);
   let titlePos = $derived(scrollPos + +titleElem?.getBoundingClientRect().top!);
