@@ -15,8 +15,14 @@
   let windowHeight: number = $state(0);
   let scrollPos: number = $state(0);
 
-  let titleWidth = $derived(+titleElem?.clientWidth!);
-  let titlePos = $derived(scrollPos + +titleElem?.getBoundingClientRect().top!);
+  const mapNumber = (x: number, a: number, b: number, c: number, d: number) => {
+    x = x < a ? a : x;
+    x = x > b ? b : x;
+    return ((x - a) / (b - a)) * (d - c) + c;
+  };
+
+  let titleWidth = $derived(titleElem?.clientWidth ?? 0);
+  let titlePos = $derived(scrollPos + (titleElem?.getBoundingClientRect().top ?? 0));
   let repCount = $derived(Math.ceil(windowWidth / titleWidth) + 1 || 10);
   let overflowWidth = $derived(titleWidth * repCount - windowWidth);
   let titleScroll = $derived(
