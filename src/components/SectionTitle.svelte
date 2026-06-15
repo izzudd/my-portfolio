@@ -1,5 +1,6 @@
 <script lang="ts">
   import HorizontalBorderContainer from './HorizontalBorderContainer.svelte';
+  import { mapNumber } from '../utils/math';
 
   interface Props {
     title: string;
