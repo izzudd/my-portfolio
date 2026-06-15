@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import GridContainer from '@component/GridContainer.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
