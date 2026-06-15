@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import GridContainer from '@component/GridContainer.svelte';
   import SectionTitle from '@component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
@@ -25,7 +25,7 @@
             <div class="mb-2 floating-fixed bg-black border-4 border-black flex">
               <label for="name"><Icon icon="material-symbols:person" /></label>
               <input
-                type="name"
+                type="text"
                 name="name"
                 placeholder="How should I call you? Leave your name here"
                 required
