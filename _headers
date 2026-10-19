@@ -1,0 +1,5 @@
+# Consumed by the Cloudflare Worker (deployed with --assets=./build).
+# adapter-netlify 7 no longer appends this rule itself (adapter 6 did), and
+# without it every hashed asset revalidates instead of being cached for a year.
+/_app/immutable/*
+  cache-control: public, immutable, max-age=31536000
