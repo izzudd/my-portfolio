@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { inView, animate, stagger, type AnimationControls } from 'motion';
-  import { splashFinished } from '@store/pageLoading';
+  import { inView, animate, stagger, type AnimationPlaybackControls } from 'motion';
+  import { splashFinished } from '#store/pageLoading.ts';
 
   interface Props {
     topBorder?: boolean;
@@ -17,14 +17,14 @@
   let ySides = $derived([topEl, bottomEl].filter(Boolean) as HTMLDivElement[]);
   let wrapperWidth = $state(0);
 
-  let animation: AnimationControls | undefined = $state();
+  let animation: AnimationPlaybackControls | undefined = $state();
 
   onMount(async () => {
     inView(ySides[0], () => {
       animation = animate(
         ySides,
         { width: [0, '100%'] },
-        { easing: 'ease-out', duration: 1, delay: stagger(0.2, { start: 0.5 }) }
+        { ease: 'easeOut', duration: 1, delay: stagger(0.2, { startDelay: 0.5 }) }
       );
       animation.pause();
     });

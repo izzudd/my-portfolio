@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Card from '@component/Card.svelte';
-  import GridContainer from '@component/GridContainer.svelte';
-  import SectionTitle from '@component/SectionTitle.svelte';
-  import projects from '@content/projects.yaml';
+  import Card from '#component/Card.svelte';
+  import GridContainer from '#component/GridContainer.svelte';
+  import SectionTitle from '#component/SectionTitle.svelte';
+  import projects from '#content/projects.yaml';
 
   const joinedTags = projects.map((p) => p.tag.join(' | '));
 </script>

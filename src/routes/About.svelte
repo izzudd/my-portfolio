@@ -1,10 +1,10 @@
 <script>
-  import GridContainer from '@component/GridContainer.svelte';
-  import SectionTitle from '@component/SectionTitle.svelte';
+  import GridContainer from '#component/GridContainer.svelte';
+  import SectionTitle from '#component/SectionTitle.svelte';
   import Icon from '@iconify/svelte';
 
-  import about from '@content/about.yaml';
-  import { loadContent } from '@store/pageLoading';
+  import about from '#content/about.yaml';
+  import { loadContent } from '#store/pageLoading.ts';
 
   const techEntries = Object.entries(about.techs);
 </script>
@@ -39,7 +39,7 @@
         <!-- Right pane: rating and decoration -->
         <div class="lg:flex-1 w-full mt-8 lg:mt-0">
           <div class="hidden lg:block">
-            {#await loadContent(() => import('@component/Illustration/Coffee.svelte')) then Coffee}
+            {#await loadContent(() => import('#component/Illustration/Coffee.svelte')) then Coffee}
               <Coffee.default />
             {/await}
           </div>

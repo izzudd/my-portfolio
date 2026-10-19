@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { splashFinished } from '@store/pageLoading';
-  import { animate, stagger, inView, type AnimationControls } from 'motion';
+  import { splashFinished } from '#store/pageLoading.ts';
+  import { animate, stagger, inView, type AnimationPlaybackControls } from 'motion';
   import { onMount } from 'svelte';
   interface Props {
     left?: import('svelte').Snippet;
@@ -13,7 +13,7 @@
   let wrapper: HTMLElement | undefined = $state();
   let xSides: HTMLDivElement[] = $state([]);
 
-  let animation: AnimationControls | undefined = $state();
+  let animation: AnimationPlaybackControls | undefined = $state();
 
   onMount(() => {
     inView(wrapper!, () => {

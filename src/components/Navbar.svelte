@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GridContainer from '@component/GridContainer.svelte';
+  import GridContainer from '#component/GridContainer.svelte';
   import HorizontalBorderContainer from './HorizontalBorderContainer.svelte';
 
   let showMobileNav = $state(false);
